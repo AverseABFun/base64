@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>base64 decoder/encoder</title>
+</head>
+<body>
+    <script src="base64.js"></script>
+    <input type="text" id="input"><br>
+    <button id="encode" onclick="document.getElementById('output').value = Base64.encode(document.getElementById('input').value)">encode</button><button id="decode" onclick="document.getElementById('output').value = Base64.decode(document.getElementById('input').value)">decode</button><br>
+    <input type="text" id="output" disabled aria-disabled="true">
+</body>
+</html>
