@@ -5,6 +5,11 @@
  * AverseABFun.          *
  * Please don't remove   *
  * these credits!        *
+ * (although I don't     *
+ * know why you would    *
+ * WANT for people to    *
+ * think cursed beast of *
+ * a library is yours)   *
 \*************************/
 const Base64 = {
     _alphabet: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_", // You usually only want to change the last two if you want to change the specification used, this implementaion is using base64url(https://datatracker.ietf.org/doc/html/rfc4648#section-5), and you can see the differences here(https://en.wikipedia.org/wiki/Base64#Variants_summary_table)
@@ -59,7 +64,7 @@ const Base64 = {
         return ints.join('');
     }
 };
-if (typeof window === 'undefined') {
+if (typeof window === 'undefined') { // for node.js testing purposes(remove this if necessary)
     let testVal = Base64.encode("test");
     console.log(testVal);
     console.log(Base64.decode(testVal));
